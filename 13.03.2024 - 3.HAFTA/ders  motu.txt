@@ -1,0 +1,90 @@
+SQL SERVERE BAÐLANMA 
+ACCESSE BAÐLANTI YAPMA
+ACCES YENÝ TABLO AÇ SA
+
+
+DBGRÝD OPTÝONS EDÝT ÖZELLÝÐÝNÝ FALSE ROWSELECT ÖZELLÝÐÝNÝ TRUE YAPTIK
+
+
+
+
+ADOTABLE <CONNECTÝON STRÝNG < BUÝLD< SQL SERVERÝ SEÇ <YENÝLE<WÝNDOWS NT <SUNUCU VERÝTABANINI SEÇ<SINAMA YAP VE OKEYE BASMADAN KODU KOPYALADIK
+                   
+daha sonra buton koduna 
+
+
+
+ADOTable1.ConnectionString :='Provider=SQLOLEDB.1;Integrated Security=SSPI;Persist Security Info=False;Initial Catalog=AKBANK';
+ADOTable1.TableName :='Table_1';
+DataSource1.DataSet :=ADOTable1 ;
+DBGrid1.DataSource :=DataSource1 ;
+ADOTable1.Active :=true ;
+//ADOTable1.Open ;
+
+
+
+kodunu yazdýk
+
+persist security info olmasada olur 
+initial catolog yerine de database de yazýlabilir 
+
+
+
+
+
+FORM 2 AÇTIK 
+2 EDÝT MAXLENGT CHARCASE DEÝÞTÝR
+COMBOBOXU ÝTEMS ÞEHÝR EKLEME YAPTIK 
+
+DAHA SONRA NORMAL BUTON EKLE SÝSTEME KAYDET
+ADOQUERY
+DATA ACCES
+BÝRDE GRÝT
+EKLEDÝK
+
+
+
+
+
+
+
+
+ADO BUÝLD .\BÝLGÝLER2.MDB    DAHA SONRA SQL ÖZELLÝÐÝ SELECT*FROM TABLO1
+
+
+
+
+
+ÖDEV
+
+
+BUTONA BASILDIÐINDA input box üzerinden  bir sayý isteyiniz eðer girilen sayý negatif ise yada 10 dan büyükse
+hata mesajý verir ve tekrardan inputbox çalýþýr lütfen bir sayý giriniz yazar bunma göre ;girilen sayýnýn 
+faktoryeli hesaplanýr ve sql kodu kullanýlarak sayuýnýn kendisi faktoryelin sonucu ve hangi tarih- saatte kaydedildiði ile birlikte 
+bu hesaplamayý yapan kiþinin adý ve soyadý kaydedilir 
+yukarýda özellikleri verilen prgyi yapýnýz 1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

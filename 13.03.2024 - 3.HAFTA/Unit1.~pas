@@ -1,0 +1,39 @@
+unit Unit1;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs, Grids, DBGrids, DB, ADODB, StdCtrls;
+
+type
+  TForm1 = class(TForm)
+    ADOTable1: TADOTable;
+    DataSource1: TDataSource;
+    DBGrid1: TDBGrid;
+    Button1: TButton;
+    procedure Button1Click(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form1: TForm1;
+
+implementation
+
+{$R *.dfm}
+
+procedure TForm1.Button1Click(Sender: TObject);
+begin
+ADOTable1.ConnectionString :='Provider=SQLOLEDB.1;Integrated Security=SSPI;Persist Security Info=False;Initial Catalog=AKBANK';
+ADOTable1.TableName :='Table_1';
+DataSource1.DataSet :=ADOTable1 ;
+DBGrid1.DataSource :=DataSource1 ;
+ADOTable1.Active :=true ;
+//ADOTable1.Open ;
+end;
+
+end.
